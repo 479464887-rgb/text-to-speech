@@ -24,7 +24,7 @@ input[type=range]{flex:1;min-width:100px;}
 .btn:hover{background:#2ea043;}
 .btn:disabled{background:#30363d;color:var(--text);cursor:default;}
 label{font-size:12px;color:var(--text);display:block;margin-bottom:4px;}
-</style><script type="application/ld+json">
+::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background:#0d1117}::-webkit-scrollbar-thumb{background:#30363d;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#484f58}*:focus-visible{outline:2px solid #58a6ff;outline-offset:2px}::selection{background:rgba(88,166,255,0.3);color:#fff}</style><script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Text to Speech","description":"Convert text to speech using browser Web Speech API","url":"https://479464887-rgb.github.io/text-to-speech/","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
 </head><body>
@@ -44,4 +44,9 @@ loadVoices();synth.onvoiceschanged=loadVoices;
 document.getElementById('rate').addEventListener('input',e=>document.getElementById('rate-val').textContent=e.target.value);
 document.getElementById('speak-btn').addEventListener('click',()=>{synth.cancel();const u=new SpeechSynthesisUtterance(document.getElementById('text').value);const vi=document.getElementById('voice-select').value;if(voices[vi])u.voice=voices[vi];u.rate=parseFloat(document.getElementById('rate').value);synth.speak(u)});
 document.getElementById('stop-btn').addEventListener('click',()=>synth.cancel());
-</script></body></html>
+</script>  <footer style="padding:16px 24px;border-top:1px solid #21262d;text-align:center;font-size:12px;color:#484f58">
+    <a href="https://devkit-tools.xyz" style="color:#58a6ff;text-decoration:none;margin:0 8px">DevKit Tools</a>
+    <a href="https://devkit-tools.xyz/privacy.html" style="color:#58a6ff;text-decoration:none;margin:0 8px">Privacy</a>
+    <a href="https://devkit-tools.xyz/terms.html" style="color:#58a6ff;text-decoration:none;margin:0 8px">Terms</a>
+  </footer>
+</body></html>
